@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-sm">
+        <form [formGroup]="dataForm">
+            <select id="inputState" class="form-control" formControlName="oferta">
+                <option selected>Choose...</option>
+                <option  *ngFor = "let item of listOffert; let i = index" [ngValue]="item" >{{i}}</option>
+              </select>
+    
+        </form>
+    </div>
+    <div class="col-sm">
+       
+        
+
+        <ul class="list-group">
+            <li class="list-group-item" > ID oferta {{id}} </li>
+            <li class="list-group-item" >Nombre : {{name}}</li>
+           
+          </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm">
+        <h2>Caracteristicas</h2>
+        <app-characteristics [charac]="characteristics" ></app-characteristics>
+    </div>
+    <div class="col-sm">
+        <app-prices [price]="productOfferingPrices"></app-prices>
+    </div>
+</div>
+  
